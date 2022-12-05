@@ -1,6 +1,9 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Link from '@mui/material/Link';
+import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
@@ -24,6 +27,11 @@ export default function ActionAreaCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
+      <CardActions>
+      <Button size="small" variant="contained" color="success">
+        <Link href="./Rooms" underline="hover" color="white" >Staff</Link>
+        </Button>
+      </CardActions>
     </Card>
   );
 }

@@ -1,13 +1,16 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Link from '@mui/material/Link';
 import { CardActionArea } from '@mui/material';
 
 export default function ActionAreaCard() {
   return (
-    <Card sx={{ maxWidth: 275, height:350 }}>
+    <Card sx={{ maxWidth: 275, height:450 }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -24,6 +27,11 @@ export default function ActionAreaCard() {
           </Typography>
         </CardContent>
       </CardActionArea>
+      <CardActions>
+      <Button size="small" variant="contained" color="success">
+        <Link href="./Rooms" underline="hover" color="white" >Rooms</Link>
+        </Button>
+      </CardActions>
     </Card>
   );
 }

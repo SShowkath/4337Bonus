@@ -1,7 +1,6 @@
 import * as React from 'react';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';import PeopleIcon from '@mui/icons-material/People';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
@@ -29,7 +28,7 @@ export const mainListItems = (
       <ListItemIcon>
         <AssignmentIndIcon />
       </ListItemIcon>
-      <ListItemText primary="Assign" />
+      <Link href="./AssignPage" underline="hover" color="black" >Staff Assignment</Link>
     </ListItemButton>    
     <ListItemButton>
       <ListItemIcon>
@@ -56,7 +55,7 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Medical History" />
+      <Link href="./MedHistory" underline="hover" color="black" >Medical Histories</Link>
     </ListItemButton>
   </React.Fragment>
 );

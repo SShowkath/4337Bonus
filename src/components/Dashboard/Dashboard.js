@@ -18,7 +18,7 @@ import { mainListItems, secondaryListItems } from './listItems';
 import PatientCard from "./PatientCard";
 import DoctorCard from "./DoctorCard";
 import RoomCard from "./RoomCard";
-import Table from "./Table.js";
+import {Table} from "./Table.js";
 import EventCard from "./EventCard.js"
 
 
@@ -153,7 +153,7 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',    
                     flexDirection: 'row',
-                    height: 350,
+                    height: 375,
                   }}
                 >
                   {<PatientCard />}
@@ -168,7 +168,7 @@ function DashboardContent() {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 350,
+                    height: 375,
                   }}
                 >
                   { <EventCard />}
@@ -176,7 +176,7 @@ function DashboardContent() {
               </Grid>
               {/* Recent Orders */}
               <Grid item xs={12}>
-                <h1>Recent Patients</h1>
+                <h1>Salary Comparison</h1>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   {<Table/>}
                 </Paper>
