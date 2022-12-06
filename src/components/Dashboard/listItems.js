@@ -34,7 +34,7 @@ export const mainListItems = (
       <ListItemIcon>
         <EventIcon />
       </ListItemIcon>
-      <Link href="./Events" underline="hover" color="black" >Events</Link>
+      <Link href="./EventPage" underline="hover" color="black" >Events</Link>
     </ListItemButton>
   </React.Fragment>
 );

@@ -29,7 +29,7 @@ export default function ActionAreaCard() {
       </CardActionArea>
       <CardActions>
       <Button size="small" variant="contained" color="success">
-        <Link href="./Rooms" underline="hover" color="white" >Patients</Link>
+        <Link href="./Patients" underline="hover" color="white" >Patients</Link>
         </Button>
       </CardActions>
     </Card>

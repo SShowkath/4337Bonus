@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   Chart as ChartJS,
   LinearScale,
@@ -22,20 +23,20 @@ export const options = {
 export const data = {
   datasets: [
     {
-      label: 'Red dataset',
-      data: Array.from({ length: 50 }, () => ({
-        x: faker.datatype.number({ min: -100, max: 100 }),
-        y: faker.datatype.number({ min: -100, max: 100 }),
-        r: faker.datatype.number({ min: 5, max: 20 }),
+      label: 'Your Salary',
+      data: Array.from({ length: 1 }, () => ({
+        x: faker.datatype.number({ min: 0, max: 50 }),
+        y: faker.datatype.number({ min: 100000, max: 450000 }),
+        r: faker.datatype.number({ min: 5, max: 5 }),
       })),
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
     },
     {
-      label: 'Blue dataset',
+      label: 'Colleagues\' Salaries',
       data: Array.from({ length: 50 }, () => ({
-        x: faker.datatype.number({ min: -100, max: 100 }),
-        y: faker.datatype.number({ min: -100, max: 100 }),
-        r: faker.datatype.number({ min: 5, max: 20 }),
+        x: faker.datatype.number({ min: 0, max: 50 }),
+        y: faker.datatype.number({ min: 100000, max: 450000 }),
+        r: faker.datatype.number({ min: 5, max: 5 }),
       })),
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
     },
@@ -43,5 +44,7 @@ export const data = {
 };
 
 export function Table() {
+   
   return <Bubble options={options} data={data} />;
+
 }
