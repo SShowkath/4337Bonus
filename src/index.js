@@ -9,6 +9,7 @@ import Patients from "./components/PatientInfoPage/Patients";
 import MedHistory from "./components/MedHistoryPage/MedHistory";
 import EventPage from "./components/Events/EventPage";
 import VideoPage from "./components/VideoPage/VideoPage";
+// import AssignPage from "./components/AssignPage/AssignPage";
 import App from "./App";
 
 ReactDOM.render(
@@ -21,6 +22,7 @@ ReactDOM.render(
       <Route path ="/MedHistory" element={<MedHistory />} />
       <Route path ="/EventPage" element={<EventPage />} />
       <Route path ="/VideoPage" element={<VideoPage />} />
+      {/* <Route path ="/AssignPage" element={<AssignPage />}/> */}
 
     </Routes>
   </Router>,

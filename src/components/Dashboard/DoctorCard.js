@@ -33,7 +33,7 @@ export default function ActionAreaCard() {
             {Docs.length}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Available Doctors
+            Available Staff Members
           </Typography>
         </CardContent>
       </CardActionArea>

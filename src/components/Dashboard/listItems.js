@@ -2,7 +2,8 @@ import * as React from 'react';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListSubheader from '@mui/material/ListSubheader';
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';import PeopleIcon from '@mui/icons-material/People';
+// import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import PeopleIcon from '@mui/icons-material/People';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import EventIcon from '@mui/icons-material/Event';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
@@ -25,12 +26,12 @@ export const mainListItems = (
       </ListItemIcon>
       <Link href="./Rooms" underline="hover" color="black" >Rooms</Link>
     </ListItemButton>
-    <ListItemButton>
+    {/* <ListItemButton>
       <ListItemIcon>
         <AssignmentIndIcon />
       </ListItemIcon>
       <Link href="./AssignPage" underline="hover" color="black" >Staff Assignment</Link>
-    </ListItemButton>    
+    </ListItemButton>     */}
     <ListItemButton>
       <ListItemIcon>
         <EventIcon />
