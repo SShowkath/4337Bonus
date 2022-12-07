@@ -1,16 +1,16 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react'
 import {
   Chart as ChartJS,
   LinearScale,
   PointElement,
+  LineElement,
   Tooltip,
   Legend,
 } from 'chart.js';
-import { Bubble } from 'react-chartjs-2';
-import { faker } from '@faker-js/faker';
+import { Scatter } from 'react-chartjs-2';
 
-ChartJS.register(LinearScale, PointElement, Tooltip, Legend);
+
+ChartJS.register(LinearScale, PointElement, LineElement, Tooltip, Legend);
 
 export const options = {
   scales: {
@@ -20,31 +20,58 @@ export const options = {
   },
 };
 
-export const data = {
-  datasets: [
+
+
+ 
+ export function Table() {
+    const [Salaries, setSalaries] = useState([]);    
+
+    useEffect(() => {
+        fetch('http://localhost/devtest/react/employee.php')
+            .then((response) => response.json())
+            .then((json) => setSalaries(json))
+      
+    }, []);
+    
+    const DocArr =[];
+    const NurArr =[];
+    let a =0;
+    let b =0;
+    for (let i = 0; i < Salaries.length; i++)
     {
-      label: 'Your Salary',
-      data: Array.from({ length: 1 }, () => ({
-        x: faker.datatype.number({ min: 0, max: 50 }),
-        y: faker.datatype.number({ min: 100000, max: 450000 }),
-        r: faker.datatype.number({ min: 5, max: 5 }),
-      })),
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'Colleagues\' Salaries',
-      data: Array.from({ length: 50 }, () => ({
-        x: faker.datatype.number({ min: 0, max: 50 }),
-        y: faker.datatype.number({ min: 100000, max: 450000 }),
-        r: faker.datatype.number({ min: 5, max: 5 }),
-      })),
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
+      if (Salaries[i].Nurses_SSN == null)
+        DocArr[a++] = Salaries[i].Salary;
+      else 
+      {
+        NurArr[b++] = Salaries[i].Salary;
+      }
+    }
+    let k = 0;
+    let j = 0;
+    let c = 0;
+    const data = {
+      datasets: [
+        {
+          label: 'Doctor Salaries',
+          data: Array.from({ length: DocArr.length }, () => ({
+            x: k++,
+            y: DocArr[j++],
+          })),
+          backgroundColor: 'rgba(33, 150, 243)',
+        },
+        {
+          label: 'Nurse Salaries',
+          data: Array.from({ length: NurArr.length}, () => ({
+            x: k++,
+            y: NurArr[c++],
+          })),
+          backgroundColor: 'rgba(250,0,0)',
+        },
+
+      ],
+    };
+
+
+    return <Scatter options={options} data={data} />;
+
 };
-
-export function Table() {
-   
-  return <Bubble options={options} data={data} />;
-
-}

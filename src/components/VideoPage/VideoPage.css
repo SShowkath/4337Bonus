@@ -1,0 +1,50 @@
+html {
+    overflow-y: scroll;
+}
+
+.header {
+    font-size: 30px;
+    color: white;
+    
+}
+
+.input-text {
+    margin-left: 20px;
+    font-size: 2rem;
+    padding: 0.2rem .5rem;
+    line-height: 2rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+
+.search-button {
+    margin-left: 20px;
+
+}
+
+.video-grid {
+    display: grid;
+    height: 800px;
+    grid-template-columns: auto auto auto;
+    background-color: #ddd;
+    padding: 10px;
+    
+}
+
+.video-container {
+    height: 350;
+    width: 220px;
+    
+    margin: 10px;
+    padding: 10px;
+}
+
+#proficiency-label {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#proficiency-select {
+    margin-left: 10px;
+}

@@ -7,6 +7,7 @@ import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import EventIcon from '@mui/icons-material/Event';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import Link from '@mui/material/Link';
 
 
@@ -35,6 +36,12 @@ export const mainListItems = (
         <EventIcon />
       </ListItemIcon>
       <Link href="./EventPage" underline="hover" color="black" >Events</Link>
+    </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
+        <OndemandVideoIcon />
+      </ListItemIcon>
+      <Link href="./VideoPage" underline="hover" color="black" >Videos</Link>
     </ListItemButton>
   </React.Fragment>
 );

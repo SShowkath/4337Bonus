@@ -1,4 +1,4 @@
-import RoomTable from "./RoomTable";
+import RoomTable from "./RoomsTable/RoomTable";
 import RoomsTitle from "./RoomsTitle";
 
 function Rooms() {

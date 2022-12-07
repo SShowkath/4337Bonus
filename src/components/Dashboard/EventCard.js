@@ -9,6 +9,8 @@ import Link from '@mui/material/Link';
 import { CardActionArea } from '@mui/material';
 
 export default function ActionAreaCard() {
+
+
   return (
     <Card sx={{ maxWidth: 275, height:450 }}>
       <CardActionArea>
@@ -19,8 +21,8 @@ export default function ActionAreaCard() {
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            X Number
+          <Typography gutterBottom variant="h5" component="div" fontWeight="bold">
+            0
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Events today

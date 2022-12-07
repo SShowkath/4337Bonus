@@ -1,4 +1,4 @@
-import HistoryTable from "./HistoryTable";
+import HistoryTable from "./MedHistoryTable/MedHistoryTable";
 import HistoryTitle from "./HistoryTitle";
 
 function MedHistory() {

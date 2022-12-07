@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
@@ -9,6 +9,15 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 export default function ActionAreaCard() {
+  const [patients, setPatients] = useState([]);    
+
+  useEffect(() => {
+      fetch('http://localhost/devtest/react/department.php')
+          .then((response) => response.json())
+          .then((json)=> setPatients(json))
+
+  }, []);
+
   return (
     <Card sx={{ maxWidth: 275 }}>
       <CardActionArea>
@@ -19,8 +28,8 @@ export default function ActionAreaCard() {
           alt="green iguana"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            X Number
+          <Typography gutterBottom variant="h5" component="div" fontWeight="bold">
+            {patients.length}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Current Patients
