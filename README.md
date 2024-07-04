@@ -7,7 +7,9 @@ This project is a comprehensive Hospital Management Website designed to streamli
 Patient Tracking: Keep detailed records of patient information, medical history, and treatment plans.
 Event Scheduling: Manage and schedule events such as medical appointments, surgeries, and other hospital activities.
 Staff Room Assignments: Allocate rooms to hospital staff, ensuring optimal use of space and resources.
-Technologies Used
+*Note* Database is no longer runnning - empty website data
+
+**Technologies Used**
 Frontend: React
 Backend: PHP MyAdmin
 Database: SQL, populated with Python scripts
